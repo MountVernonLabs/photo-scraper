@@ -1,7 +1,7 @@
 # photo-scraper
 The aim of this tool is to scrape publicly available photo sites and capture photos geotagged within a certain radius to record for research and historical archive purposes.
 
-Currently the tool will allow you to scrape photos publicly stored on Flickr but we plan on extending it to other photo sharing platforms in the future.
+Currently the tool will allow you to scrape photos publicly stored on Flickr and Instagram but we plan on extending it to other photo sharing platforms in the future.
 
 ## Installing
 These scripts are designed to run in the PHP command line with write access into the folders to save the photos.  
@@ -19,4 +19,13 @@ These scripts are designed to run in the PHP command line with write access into
 * The script runs up to 50 pages (Flickr limit)
 * You can run the script as many times as you want and it will continue to append to this folder
 * If the images already exist the script will not re-download the files
+
+### Instagram
+* Navigate to the instagram sub folder in your terminal
+* In the terminal type > php scrape.php
+* A sub folder will be created called img and the script will start to download all avaialble photos
+* The script will only return 20 of your most recent photos (Instagram limit)
+* You can run the script as many times as you want and it will continue to append to this folder
+* If the images already exist the script will not re-download the files
+* You may want to consider creating a scheduled job to run every X amount of minutes.  Just beware of the Instagram API limits.
 

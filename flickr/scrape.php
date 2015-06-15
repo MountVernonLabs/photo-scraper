@@ -2,7 +2,9 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-mkdir("img", 0775);
+if (!file_exists("img/")) {
+    mkdir("img", 0775);
+}
 
 $configFile = dirname(__FILE__) . '/../config.php';
 
